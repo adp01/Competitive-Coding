@@ -23,6 +23,8 @@ template <typename T> T lcm(T a, T b){return (a*b)/gcd(a,b); }
 
 
 double tick(){static clock_t oldt,newt=clock();double diff=1.0*(newt-oldt)/CLOCKS_PER_SEC;oldt=newt;return diff;}
+
+//---------------------------------------------------------------------------------------------
 const int MAXN = 100005;
 int id[MAXN];
 int sz[MAXN];
@@ -50,7 +52,7 @@ void unite(int a, int b){
 }
 
 void init_dsu(int N){
-    rep(i, N){
+    loop(i, N){
         id[i] = i;
         sz[i] = 1;
     }
